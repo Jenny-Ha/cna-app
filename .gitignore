@@ -1,4 +1,5 @@
 .DS_Store
+.idea/
 .dart_tool/
 
 .packages
@@ -7,3 +8,4 @@
 build/
 
 .flutter-plugins
+android/.settings/org.eclipse.buildship.core.prefs

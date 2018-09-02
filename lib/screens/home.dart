@@ -10,23 +10,23 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
   const StaggeredTile.count(4, 5),
   const StaggeredTile.count(6, 5),
 
+  const StaggeredTile.count(5, 5),
+  const StaggeredTile.count(5, 5),
+  
   const StaggeredTile.count(3, 5),
   const StaggeredTile.count(4, 5),
   const StaggeredTile.count(3, 5),
-
-  const StaggeredTile.count(6, 5),
-  const StaggeredTile.count(4, 5),
 ];
 
 List<Widget> _tiles = const <Widget>[
-  const _ServiceTile(Colors.green, Icons.widgets, "TV en Vivo"),
-  const _ServiceTile(Colors.lightBlue, Icons.wifi, "Web Movil"),
+  const _ServiceTile(Colors.green, Icons.widgets, "Televisión en Vivo"),
+  const _ServiceTile(Colors.lightBlue, Icons.wifi, "Web"),
   const _ServiceTile(Colors.amber, Icons.panorama_wide_angle, "La Encuesta"),
-  const _ServiceTile(Colors.indigo, Icons.airline_seat_flat, "Radio en Vivo"),
+  const _ServiceTile(Colors.indigo, Icons.airline_seat_flat, "Radio en vivo"),
   const _ServiceTile(Colors.brown, Icons.map, "Teléfonos de Emergencia"),
   const _ServiceTile(Colors.deepOrange, Icons.send, "Redes Sociales"),
-  const _ServiceTile(Colors.red, Icons.bluetooth, "Servicios"),
   const _ServiceTile(Colors.green, Icons.widgets, "Periódicos"),
+  const _ServiceTile(Colors.red, Icons.bluetooth, "Servicios"),
   const _ServiceTile(Colors.lightBlue, Icons.wifi, "Radios"),
 ];
 
