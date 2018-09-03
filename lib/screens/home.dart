@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import '../utils/NewIcons.dart';
 import '../routes.dart';
 
 List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
@@ -18,16 +19,17 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
   const StaggeredTile.count(3, 5),
 ];
 
+
 List<Widget> _tiles = const <Widget>[
-  const _ServiceTile(Colors.green, Icons.widgets, "Televisión en Vivo"),
-  const _ServiceTile(Colors.lightBlue, Icons.wifi, "Web"),
-  const _ServiceTile(Colors.amber, Icons.panorama_wide_angle, "La Encuesta"),
-  const _ServiceTile(Colors.indigo, Icons.airline_seat_flat, "Radio en vivo"),
-  const _ServiceTile(Colors.brown, Icons.map, "Teléfonos de Emergencia"),
-  const _ServiceTile(Colors.deepOrange, Icons.send, "Redes Sociales"),
-  const _ServiceTile(Colors.green, Icons.widgets, "Periódicos"),
-  const _ServiceTile(Colors.red, Icons.bluetooth, "Servicios"),
-  const _ServiceTile(Colors.lightBlue, Icons.wifi, "Radios"),
+  const _ServiceTile(Colors.green, NewIcons.television, "Televisión en Vivo"),
+  const _ServiceTile(Colors.lightBlue, Icons.web, "Web"),
+  const _ServiceTile(Colors.amber, NewIcons.encuesta, "La Encuesta"),
+  const _ServiceTile(Colors.indigo, NewIcons.radio, "Radio en vivo"),
+  const _ServiceTile(Colors.brown, NewIcons.telefono, "Teléfonos de Emergencia"),
+  const _ServiceTile(Colors.deepOrange, NewIcons.rrss, "Redes Sociales"),
+  const _ServiceTile(Colors.green, NewIcons.periodico, "Periódicos"),
+  const _ServiceTile(Colors.red, NewIcons.servicios, "Servicios"),
+  const _ServiceTile(Colors.lightBlue, NewIcons.ondas, "Radios"),
 ];
 
 class Home extends StatelessWidget {
@@ -69,6 +71,7 @@ class _ServiceTile extends StatelessWidget {
               new Icon(
                 iconData,
                 color: Colors.white,
+                size: 28.0,
               ),
               new Text(
                 title,
