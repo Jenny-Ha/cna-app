@@ -64,9 +64,9 @@ class _ServiceTile extends StatelessWidget {
 
   const _ServiceTile(this.backgroundColor, this.iconData, this.title, this.route);
 
-  _launchURL(String url) async {
+  Future _launchURL(String url) async {
     if (await canLaunch(url)) {
-      await launch(url, forceSafariVC: true, forceWebView: true);
+      await launch(url, forceSafariVC: false, forceWebView: false);
     } else {
       print('Lo sentimos, no se puede acceder a $url'); 
     }
