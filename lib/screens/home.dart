@@ -25,7 +25,7 @@ List<Widget> _tiles = const <Widget>[
   const _ServiceTile(Colors.lightBlue, Icons.web, "Web"),
   const _ServiceTile(Colors.amber, NewIcons.encuesta, "La Encuesta"),
   const _ServiceTile(Colors.indigo, NewIcons.radio, "Radio en vivo"),
-  const _ServiceTile(Colors.brown, NewIcons.telefono, "Teléfonos de Emergencia"),
+  const _ServiceTile(Colors.brown, NewIcons.telefono, "Teléfonos de emergencia"),
   const _ServiceTile(Colors.deepOrange, NewIcons.rrss, "Redes Sociales"),
   const _ServiceTile(Colors.green, NewIcons.periodico, "Periódicos"),
   const _ServiceTile(Colors.red, NewIcons.servicios, "Servicios"),
@@ -71,14 +71,21 @@ class _ServiceTile extends StatelessWidget {
               new Icon(
                 iconData,
                 color: Colors.white,
-                size: 28.0,
+                size: 36.0,
               ),
-              new Text(
-                title,
-                textAlign: TextAlign.center,
-                style: new TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+              new Container(
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 1.0,
+                ),
+                child: new Text(
+                  title,
+                  textAlign: TextAlign.center,
+                  style: new TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    height: 1.15,
+                  ),
                 ),
               ),
             ],
