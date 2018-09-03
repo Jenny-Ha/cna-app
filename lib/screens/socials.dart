@@ -6,7 +6,7 @@ class Socials extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Servicios'),
+        title: Text('Redes Sociales'),
       ),
       body: Center(
         child: RaisedButton(

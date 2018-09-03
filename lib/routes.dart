@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 // import routes
+// import 'screens/example.dart';
 import 'screens/home.dart';
 import 'screens/liveRadio.dart';
 import 'screens/liveTV.dart';
@@ -13,6 +14,7 @@ import 'screens/socials.dart';
 const String homeRoute = '/';
 
 Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
+  // '/': (BuildContext context) => new ContactsDemo(),
   '/': (BuildContext context) => new Home(),
   '/liveRadio': (BuildContext context) => new LiveRadio(),
   '/liveTV': (BuildContext context) => new LiveTV(),

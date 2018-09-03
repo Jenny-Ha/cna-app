@@ -23,6 +23,7 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
 
 // TODO: escoger colores complementarios y que armonizen con cada boton
 // TODO: Colocar una sombra interna en cada card (= app anterior)
+// TODO: Intentar importar íconos de la app anterior
 
 List<Widget> _tiles = const <Widget>[
   const _ServiceTile(Colors.amber, NewIcons.television, "Televisión en Vivo", '/liveTV'),
