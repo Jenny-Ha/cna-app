@@ -9,3 +9,4 @@ build/
 
 .flutter-plugins
 android/.settings/org.eclipse.buildship.core.prefs
+.vscode/
