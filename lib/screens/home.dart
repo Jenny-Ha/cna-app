@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:async';
 import '../utils/NewIcons.dart';
 import '../routes.dart';
 
@@ -23,18 +25,18 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
 // TODO: Colocar una sombra interna en cada card (= app anterior)
 
 List<Widget> _tiles = const <Widget>[
-  const _ServiceTile(Colors.amber, NewIcons.television, "Televisión en Vivo"),
-  const _ServiceTile(Colors.deepOrange, Icons.web, "Web"),
+  const _ServiceTile(Colors.amber, NewIcons.television, "Televisión en Vivo", '/liveTV'),
+  const _ServiceTile(Colors.deepOrange, Icons.web, "Web", 'https://www.cna.pe'),
   
-  const _ServiceTile(Colors.deepPurple, NewIcons.encuesta, "La Encuesta"),
-  const _ServiceTile(Colors.red, NewIcons.radio, "Radio en vivo"),
+  const _ServiceTile(Colors.deepPurple, NewIcons.encuesta, "La Encuesta", '/poll'),
+  const _ServiceTile(Colors.red, NewIcons.radio, "Radio en vivo", '/liveRadio'),
   
-  const _ServiceTile(Colors.teal, NewIcons.telefono, "Teléfonos de emergencia"),
-  const _ServiceTile(Colors.lime, NewIcons.rrss, "Redes Sociales"),
+  const _ServiceTile(Colors.teal, NewIcons.telefono, "Teléfonos de emergencia", '/phones'),
+  const _ServiceTile(Colors.lime, NewIcons.rrss, "Redes Sociales", '/socials'),
 
-  const _ServiceTile(Colors.lightBlue, NewIcons.periodico, "Periódicos"),
-  const _ServiceTile(Colors.cyan, NewIcons.servicios, "Servicios"),
-  const _ServiceTile(Colors.blue, NewIcons.ondas, "Radios"),
+  const _ServiceTile(Colors.lightBlue, NewIcons.periodico, "Periódicos", '/newspaper'),
+  const _ServiceTile(Colors.cyan, NewIcons.servicios, "Servicios", '/services'),
+  const _ServiceTile(Colors.blue, NewIcons.ondas, "Radios", '/radios'),
 ];
 
 class Home extends StatelessWidget {
@@ -58,15 +60,30 @@ class _ServiceTile extends StatelessWidget {
   final Color backgroundColor;
   final IconData iconData;
   final String title;
+  final String route;
 
-  const _ServiceTile(this.backgroundColor, this.iconData, this.title);
+  const _ServiceTile(this.backgroundColor, this.iconData, this.title, this.route);
 
+  _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url, forceSafariVC: true, forceWebView: true);
+    } else {
+      print('Lo sentimos, no se puede acceder a $url'); 
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return new Card(
       color: backgroundColor,
       child: new InkWell(
-        onTap: () {},
+        onTap: () {
+          if (route.contains('http')) {
+            print('Si es http ' + route);
+            _launchURL(route);
+          } else {
+            Navigator.pushNamed(context, route);
+          }
+        },
         child: new Padding(
           padding: const EdgeInsets.all(4.0),
           child: new Column(
