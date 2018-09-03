@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import '../data/contact_data.dart';
 
 
 class Phones extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return new DefaultTabController(
@@ -57,8 +60,13 @@ class _ContactListItem extends ListTile {
       subtitle: new Text(contact.phone),
       leading: new CircleAvatar(
         child: new Text(contact.name[0])
-      )
+      ),
       //TODO:  leading: const Icon(Icons.event_seat),
+      trailing: new IconButton(
+        icon: const Icon(Icons.phone),
+        onPressed: () => launch("tel://${contact.phone}" ),
+      ),
+      
     );
 
 }
