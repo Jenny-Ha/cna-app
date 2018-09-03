@@ -6,13 +6,13 @@ class Newspapers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Screen'),
+        title: Text('Periódicos'),
       ),
       body: Center(
         child: RaisedButton(
           child: Text('Newspapers screen'),
           onPressed: () {
-            // Navigate to second screen when tapped!
+            // Navigate to Periódicos when tapped!
           },
         ),
       ),

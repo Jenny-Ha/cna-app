@@ -6,7 +6,7 @@ class Services extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Screen'),
+        title: Text('Servicios'),
       ),
       body: Center(
         child: RaisedButton(

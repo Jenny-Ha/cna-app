@@ -6,11 +6,11 @@ class Poll extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Screen'),
+        title: Text('La Encuesta'),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('Poll screen'),
+          child: Text('Poll Encuesta'),
           onPressed: () {
             // Navigate to second screen when tapped!
           },

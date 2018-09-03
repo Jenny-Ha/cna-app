@@ -6,7 +6,7 @@ class LiveRadio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Screen'),
+        title: Text('Radio en vivo'),
       ),
       body: Center(
         child: RaisedButton(

@@ -6,13 +6,13 @@ class Phones extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Screen'),
+        title: Text('Teléfonos de Emergencia'),
       ),
       body: Center(
         child: RaisedButton(
           child: Text('Phones screen'),
           onPressed: () {
-              Navigator.of(context).pop(true);
+              Navigator.pop(context);
           },
         ),
       ),

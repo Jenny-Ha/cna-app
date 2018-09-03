@@ -78,7 +78,6 @@ class _ServiceTile extends StatelessWidget {
       child: new InkWell(
         onTap: () {
           if (route.contains('http')) {
-            print('Si es http ' + route);
             _launchURL(route);
           } else {
             Navigator.pushNamed(context, route);
