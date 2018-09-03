@@ -19,17 +19,22 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
   const StaggeredTile.count(3, 5),
 ];
 
+// TODO: escoger colores complementarios y que armonizen con cada boton
+// TODO: Colocar una sombra interna en cada card (= app anterior)
 
 List<Widget> _tiles = const <Widget>[
-  const _ServiceTile(Colors.green, NewIcons.television, "Televisión en Vivo"),
-  const _ServiceTile(Colors.lightBlue, Icons.web, "Web"),
-  const _ServiceTile(Colors.amber, NewIcons.encuesta, "La Encuesta"),
-  const _ServiceTile(Colors.indigo, NewIcons.radio, "Radio en vivo"),
-  const _ServiceTile(Colors.brown, NewIcons.telefono, "Teléfonos de emergencia"),
-  const _ServiceTile(Colors.deepOrange, NewIcons.rrss, "Redes Sociales"),
-  const _ServiceTile(Colors.green, NewIcons.periodico, "Periódicos"),
-  const _ServiceTile(Colors.red, NewIcons.servicios, "Servicios"),
-  const _ServiceTile(Colors.lightBlue, NewIcons.ondas, "Radios"),
+  const _ServiceTile(Colors.amber, NewIcons.television, "Televisión en Vivo"),
+  const _ServiceTile(Colors.deepOrange, Icons.web, "Web"),
+  
+  const _ServiceTile(Colors.deepPurple, NewIcons.encuesta, "La Encuesta"),
+  const _ServiceTile(Colors.red, NewIcons.radio, "Radio en vivo"),
+  
+  const _ServiceTile(Colors.teal, NewIcons.telefono, "Teléfonos de emergencia"),
+  const _ServiceTile(Colors.lime, NewIcons.rrss, "Redes Sociales"),
+
+  const _ServiceTile(Colors.lightBlue, NewIcons.periodico, "Periódicos"),
+  const _ServiceTile(Colors.cyan, NewIcons.servicios, "Servicios"),
+  const _ServiceTile(Colors.blue, NewIcons.ondas, "Radios"),
 ];
 
 class Home extends StatelessWidget {
