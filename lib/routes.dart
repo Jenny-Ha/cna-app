@@ -31,23 +31,24 @@ Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
     appBar: new AppBar(
       title: const Text('El Comercio'),
     ),
-    withZoom: true,
-    withLocalStorage: true,
   ),
   '/peru21': (_) => new WebviewScaffold(
     url: 'https://peru21.pe/',
     appBar: new AppBar(
       title: const Text('Peru 21'),
     ),
-    withZoom: true,
-    withLocalStorage: true,
   ),
   '/republica': (_) => new WebviewScaffold(
     url: 'https://larepublica.pe/',
     appBar: new AppBar(
       title: const Text('La República'),
     ),
-    withZoom: true,
-    withLocalStorage: true,
+  ),
+  '/livetv': (_) => new WebviewScaffold(
+    url: 'https://iblups.com/cosmosradiotvlive',
+    appBar: new AppBar(
+      title: const Text('Televisión en vivo'),
+    ),
+
   ),
 };
