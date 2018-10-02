@@ -19,11 +19,10 @@ class _NewspapersState extends State<Newspapers> {
   @override
   void dispose() {
     webView.dispose();
-
     super.dispose();
   }
 
-  /*@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -41,7 +40,8 @@ class _NewspapersState extends State<Newspapers> {
                     padding: const EdgeInsets.symmetric(vertical: 0.0),
                     sliver: new SliverList(
                       delegate: new SliverChildBuilderDelegate(
-                            (context, index) => new NewspaperRow(newspapers[index]),
+                            (context, index) =>
+                        new NewspaperRow(newspapers[index]),
                         childCount: newspapers.length,
                       ),
                     ),
@@ -52,65 +52,10 @@ class _NewspapersState extends State<Newspapers> {
           )
         ],
       ),
-    );
-  }*/
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: const Text('Plugin example app'),
-      ),
-      body: new Center(
-        child: Column(
-          children: <Widget>[
-            RaisedButton(
-              child: Text("Open Webview"),
-              onPressed: () {
-                Navigator.of(context).pushNamed("/comercio");
-              },
-            )
-          ],
-        ),
-      )
-
     );
   }
 }
 
-/*class Newspapers extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Periódicos'),
-      ),
-      body: Column(
-        children: <Widget>[
-          new Expanded(
-            child: new SafeArea(
-              child: new CustomScrollView(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: false,
-                slivers: <Widget>[
-                  new SliverPadding(
-                    padding: const EdgeInsets.symmetric(vertical: 0.0),
-                    sliver: new SliverList(
-                      delegate: new SliverChildBuilderDelegate(
-                        (context, index) => new NewspaperRow(newspapers[index]),
-                        childCount: newspapers.length,
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}*/
 
 class NewspaperRow extends StatelessWidget {
   final Newspaper newspaper;
@@ -131,7 +76,9 @@ class NewspaperRow extends StatelessWidget {
             width: 160.0,
           ),
           new RaisedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(this.newspaper.route);
+            },
             child: new Text('VER'),
           ),
         ],

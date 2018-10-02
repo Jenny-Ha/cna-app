@@ -12,8 +12,6 @@ import 'screens/radios.dart';
 import 'screens/services.dart';
 import 'screens/socials.dart';
 
-const url = "https://pub.dartlang.org";
-
 const String homeRoute = '/';
 
 Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
@@ -29,11 +27,27 @@ Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
   '/socials': (BuildContext context) => new Socials(),
 
   '/comercio': (_) => new WebviewScaffold(
-    url: url,
+    url: 'https://elcomercio.pe/',
     appBar: new AppBar(
       title: const Text('El Comercio'),
     ),
     withZoom: true,
     withLocalStorage: true,
-  )
+  ),
+  '/peru21': (_) => new WebviewScaffold(
+    url: 'https://peru21.pe/',
+    appBar: new AppBar(
+      title: const Text('Peru 21'),
+    ),
+    withZoom: true,
+    withLocalStorage: true,
+  ),
+  '/republica': (_) => new WebviewScaffold(
+    url: 'https://larepublica.pe/',
+    appBar: new AppBar(
+      title: const Text('La República'),
+    ),
+    withZoom: true,
+    withLocalStorage: true,
+  ),
 };
