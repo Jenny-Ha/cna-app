@@ -39,4 +39,35 @@ class _LiveTVState extends State<LiveTV> {
   }
 }
 
+/*import 'package:flutter_simple_video_player/flutter_simple_video_player.dart';*/
 
+/*class LiveTV extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: ListView(
+        children: <Widget>[
+          RaisedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => VideoFullPage(
+                          'https://www.youtube.com/watch?v=mgI_pH8TOVY',
+                        )),
+              );
+            },
+            child: Text("full play video"),
+          ),
+          Container(
+            height: 256.0,
+            color: Colors.black,
+            child: Center(
+              child: NetVideo("https://www.youtube.com/watch?v=mgI_pH8TOVY"),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}*/

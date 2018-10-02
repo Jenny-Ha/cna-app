@@ -45,10 +45,11 @@ Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
     ),
   ),
   '/livetv': (_) => new WebviewScaffold(
-    url: 'https://iblups.com/cosmosradiotvlive',
+    url: 'https://www.youtube.com/embed/mtGvAEiNXD0?html5=1&autoplay=0&controls=0&showinfo=0&rel=0&modestbranding=0&playsinline=1&origin=https%3A%2F%2Fiblups.com&widget_referrer=https%3A%2F%2Fiblups.com%2Fcosmosradiotvlive&enablejsapi=1&widgetid=1',
     appBar: new AppBar(
       title: const Text('Televisión en vivo'),
     ),
 
   ),
+
 };
