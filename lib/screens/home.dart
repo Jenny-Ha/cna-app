@@ -26,11 +26,11 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
 // TODO: Intentar importar íconos de la app anterior
 
 List<Widget> _tiles = const <Widget>[
-  const _ServiceTile(Colors.amber, NewIcons.television, "Televisión en Vivo", '/liveTV'),
+  const _ServiceTile(Colors.amber, NewIcons.television, "Televisión en Vivo", '/livetv'),
   const _ServiceTile(Colors.deepOrange, Icons.web, "Web", 'https://www.cna.pe'),
   
   const _ServiceTile(Colors.deepPurple, NewIcons.encuesta, "La Encuesta", '/poll'),
-  const _ServiceTile(Colors.red, NewIcons.radio, "Radio en vivo", '/liveRadio'),
+  const _ServiceTile(Colors.red, NewIcons.radio, "Radio en vivo", '/radioLive'),
   
   const _ServiceTile(Colors.teal, NewIcons.telefono, "Teléfonos de emergencia", '/phones'),
   const _ServiceTile(Colors.lime, NewIcons.rrss, "Redes Sociales", '/socials'),

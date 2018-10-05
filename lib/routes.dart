@@ -27,32 +27,37 @@ Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
   '/socials': (BuildContext context) => new Socials(),
 
   '/comercio': (_) => new WebviewScaffold(
-    url: 'https://elcomercio.pe/',
-    appBar: new AppBar(
-      title: const Text('El Comercio'),
-    ),
-  ),
+        url: 'https://elcomercio.pe/',
+        appBar: new AppBar(
+          title: const Text('El Comercio'),
+        ),
+      ),
   '/peru21': (_) => new WebviewScaffold(
-    url: 'https://peru21.pe/',
-    appBar: new AppBar(
-      title: const Text('Peru 21'),
-    ),
-  ),
+        url: 'https://peru21.pe/',
+        appBar: new AppBar(
+          title: const Text('Peru 21'),
+        ),
+      ),
   '/republica': (_) => new WebviewScaffold(
-    url: 'https://larepublica.pe/',
-    appBar: new AppBar(
-      title: const Text('La República'),
-    ),
-  ),
+        url: 'https://larepublica.pe/',
+        appBar: new AppBar(
+          title: const Text('La República'),
+        ),
+      ),
   '/livetv': (_) => new WebviewScaffold(
-    url: 'https://iblups.com/e_cnapet',
+        url: 'https://iblups.com/e_cnapet',
+        appBar: new AppBar(
+          title: const Text('Televisión en vivo'),
+        ),
+        withJavascript: true,
+        withLocalStorage: true,
+        withZoom: true,
+        withLocalUrl: true,
+      ),
+  '/radioLive': (_) => new WebviewScaffold(
+    url: 'https://iblups.com/e_desdeeljardin',
     appBar: new AppBar(
-      title: const Text('Televisión en vivo'),
+      title: const Text('Radio en vivo'),
     ),
-    withJavascript: true,
-    withLocalStorage: true,
-    withZoom: true,
-    withLocalUrl: true,
   ),
-
 };
